@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.414.3-jdk11
+FROM jenkins/jenkins:2.426.3-jdk11
 
 # Switch to root to install dependencies
 USER root
@@ -24,4 +24,4 @@ RUN curl -fsSL https://download.docker.com/linux/debian/gpg | tee /usr/share/key
 USER jenkins
 
 # Install Jenkins plugins
-RUN jenkins-plugin-cli --plugins "blueocean:1.25.3 docker-workflow:1.28"
+RUN jenkins-plugin-cli --plugins "blueocean:1.27.16 docker-workflow:1.28"
