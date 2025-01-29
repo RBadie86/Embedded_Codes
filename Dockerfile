@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.414.2-jdk11
+FROM jenkins/jenkins:2.414.3-jdk11
 
 # Switch to root to install dependencies
 USER root
