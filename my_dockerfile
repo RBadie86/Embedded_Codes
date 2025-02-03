@@ -28,7 +28,7 @@ RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 1
 RUN mkdir -p /var/jenkins_home/plugins
 
 # Download required plugins manually
-RUN curl -fsSL -o /var/jenkins_home/plugins/docker-workflow.hpi \
+RUN curl -fsSL -k/--insecure -o /var/jenkins_home/plugins/docker-workflow.hpi \
     https://updates.jenkins.io/latest/docker-workflow.hpi
 
 # Set correct permissions for plugins
