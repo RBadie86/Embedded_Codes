@@ -24,17 +24,21 @@ RUN curl -fsSLo /usr/share/keyrings/docker-archive-keyring.asc \
     https://download.docker.com/linux/debian $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list && \
     apt-get update && apt-get install -y docker-ce-cli
 
+# Create plugins directory
+RUN mkdir -p /var/jenkins_home/plugins
+
+# Download required plugins manually
+RUN curl -fsSL -o /var/jenkins_home/plugins/docker-workflow.hpi \
+    https://updates.jenkins.io/latest/docker-workflow.hpi
+
+# Set correct permissions for plugins
+RUN chown -R jenkins:jenkins /var/jenkins_home/plugins
+
 # Switch back to Jenkins user
 USER jenkins
-
-# Ensure Jenkins Plugin CLI works
-RUN jenkins-plugin-cli --plugins "docker-workflow:1.28" || echo "Plugin installation failed, will retry in container startup"
 
 # Expose Jenkins default port
 EXPOSE 8080
 
 # Set default command
 CMD ["/usr/bin/tini", "--", "/usr/local/bin/jenkins.sh"]
-
-
-
