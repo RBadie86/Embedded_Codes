@@ -1,5 +1,5 @@
 # Overview
-Microcontroller L475VG-IOT01A transmit live on-board sensor data to a mobile app that can communicate with BLE devices.
+Microcontroller **L475VG-IOT01A** transmit live on-board sensor data to a mobile app that can communicate with BLE devices.
 
 # Hardware and Software Requirements
 * The __DISCO-L475VG-IOT01A__ board
@@ -7,7 +7,7 @@ Microcontroller L475VG-IOT01A transmit live on-board sensor data to a mobile app
 * Mbed Studio as the development environment
 
 # Necessary Libraries
-In Mbed development environment please go to __File__ and choose __Add library to active program__
+In __Mbed Studio__ please go to __File__ and choose __Add library to active program__
 * https://os.mbed.com/teams/ST/code/BSP_B-L475E-IOT01/
 * https://github.com/ARMmbed/mbed-os-ble-utils
 
