@@ -16,3 +16,11 @@ Microcontroller **DISCO-L475VG-IOT01A** is equipped with MEMS sensors. In this p
 * Assign and connect the I2C peripheral to the sensor hardware.
 * Capture and update 6-axis motion data from the accelerometer and gyroscope.
 * Output sensor data via USART serial port for monitoring.
+
+# Applications
+* Motion tracking and gesture detection
+* Collecting sensor data
+* Indoor navigation
+* IoT and connected devices
+* Intelligent power saving for handheld devices
+* Vibration monitoring and compensation
